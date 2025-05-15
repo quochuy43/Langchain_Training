@@ -1,0 +1,12 @@
+Khái niệm: 
+Chains là một chuỗi các bước xử lý được thực hiện tuần tự hoặc
+theo cấu trúc được định nghĩa trước để hoàn thành một tác vụ. Mỗi bước 
+trong chain có thể là một lời gọi đến LLM, một truy vấn dữ liệu, một hành 
+động gọi công cụ, hoặc một phép biến đổi dữ liệu. Chains giúp tổ chức 
+logic phức tạp một cách có cấu trúc.
+
+Cách hoạt động:
+1. Nhận đầu vào: Chain lấy dữ liệu đầu vào từ người dùng.
+2. Xử lý từng bước: Mỗi bước trong chain thực hiện một tác vụ cụ thể (gọi LLM, truy vấn dữ liệu,...)
+3. Chuyển tiếp đầu ra: Kết quả của bước trước thường được dùng làm đầu vào cho bước tiếp theo.
+4. Trả về kết quả cuối: Chain hoàn thành và trả về kết quả cuối cùng.
