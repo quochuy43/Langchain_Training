@@ -8,11 +8,8 @@ from typing import Literal
 load_dotenv()
 if not os.getenv("GOOGLE_API_KEY"):
     raise ValueError("Can not find GOOGLE_API_KEY in .env")
-
-# Khởi tạo LLM (Gemini)
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 
-# Prompt để phân loại đầu vào
 route_prompt = ChatPromptTemplate.from_messages([
     ("system", "Route the query to either 'animal' or 'vegetable' expert."),
     ("human", "{input}")
